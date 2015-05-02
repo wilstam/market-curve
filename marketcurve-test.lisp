@@ -4,12 +4,12 @@
 ;;;; Tests for Marketbus
 ;;;;
 
-(defpackage :marketbus-test
+(defpackage :market-curve-test
   (:use :common-lisp
-	:marketbus
+	:market-curve
 	:lisp-unit))
 
-(in-package :marketbus-test)
+(in-package :market-curve-test)
 
 
 ;;; Global variables

@@ -4,7 +4,7 @@
 ;;;; Create a Mark Curve store and retieveing system, with formula feature
 ;;;;
 
-(defpackage :marketbus
+(defpackage :market-curve
   (:use :common-lisp)
   (:export :new-scale
 	   :add-scale
@@ -16,12 +16,12 @@
 	   :prev-scale-point
 	   :next-scale-point))
 
-(in-package :marketbus)
+(in-package :market-curve)
 
 ;;;
 ;;; Global variables
 ;;;
-(defvar *marketbus* nil)
+(defvar *market-curve* nil)
 (defvar *curve-scales* nil)
 
 
@@ -64,7 +64,7 @@
   "Load indiviual curve by name"
   (remove-if-not
    #'(lambda (curve) (equal (getf curve :name) name))
-   *marketbus*))
+   *market-curve*))
 
 
 (defun new-manual-curve (name scale start-point end-point)
