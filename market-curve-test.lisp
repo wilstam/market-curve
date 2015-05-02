@@ -44,7 +44,6 @@
 
 (define-test test-2-level-symbol-scale)
 (let ((scale (new-scale "??"
-			'(F G H J K M N Q U V X Z)
 			'(10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25)))
     (assert-equal t   (valid-scale-point scale 'F))
     (assert-equal nil (valid-scale-point scale 9))
